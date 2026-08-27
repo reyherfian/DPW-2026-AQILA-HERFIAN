@@ -81,3 +81,6 @@ Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam
 1. Kenapa field "Alamat" dan "No. HP" tidak diberi `requiered`, sedangkan "Nama" dan "No. Anggota" diberi?
    - karena "Nama" dan "No. Anggota" bersifat wajib yang berfungsi sebagai primary kry atau pengenal unik agar sistem dapat membedakan tiap baris data tanpa duplikasi. Sedangkan "Alamat" dan "No. HP" dibuat opsional. Nomor telepon dan alamat rumah tergolong data sensitif (Personally Identifiable Information.
 2. Apa yang akan terjadi (di browser) kalau kamu klik tombol "Simpan" tanpa mengisi field "Nama"? Coba buka filenya di browser dan praktikkan.
+   - form batal terkirim/submit dan pop-up peringatan wajib mengisi.
+3. Form ini juga belum punya action pada tag <form>-nya — apa dampaknya saat tombol "Simpan" ditekan?
+   - browser akan menerapkan default. 
