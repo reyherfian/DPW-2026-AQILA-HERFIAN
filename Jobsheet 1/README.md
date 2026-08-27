@@ -14,11 +14,7 @@
 | 6 | Latihan reflektif | ⏳ On Progress | Pending |
 | 7 | Latihan opsional | ❌ Belum | Pending |
 
-<<<<<<< HEAD
 ### 3.3 Data yang Ditampilkan (Dummy)
-=======
-### 3.3 Data yang DItampilkan (Dummy)
->>>>>>> 0263c823a3ce9d73292a8643f8b388b7ee070909
 Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam HTML statis.
 ```
 
@@ -79,8 +75,9 @@ Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam
                     <button type="button">Hapus</button>
                 </td>
             </tr>
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> 0263c823a3ce9d73292a8643f8b388b7ee070909
+
+### 6.5 Latihan Reflektif
+1. Kenapa field "Alamat" dan "No. HP" tidak diberi `requiered`, sedangkan "Nama" dan "No. Anggota" diberi?
+   - karena "Nama" dan "No. Anggota" bersifat wajib yang berfungsi sebagai primary kry atau pengenal unik agar sistem dapat membedakan tiap baris data tanpa duplikasi. Sedangkan "Alamat" dan "No. HP" dibuat opsional. Nomor telepon dan alamat rumah tergolong data sensitif (Personally Identifiable Information.
+2. Apa yang akan terjadi (di browser) kalau kamu klik tombol "Simpan" tanpa mengisi field "Nama"? Coba buka filenya di browser dan praktikkan.
