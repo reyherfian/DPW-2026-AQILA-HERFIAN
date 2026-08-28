@@ -27,4 +27,25 @@ Tautan antar-halaman menggunakan atribut `href` dengan path relatif berdasarkan 
 - **Naik folder**: `../index.html` (naik satu tingkat folder).
 - **Satu folder**: `tambah.html` (langsung nama file).
 
-*(Catatan: Jobsheet ini berfokus murni pada kerangka/struktur dokumen, sehingga belum menggunakan CSS/JS).*
+# Ringkasan: Struktur Halaman Beranda (`index.html`)
+
+### 1. Fungsi File
+- Berperan sebagai **halaman utama (entry point)** aplikasi SIMPUS-Mini yang otomatis dimuat browser saat mengakses direktori root.
+
+### 2. Bedah Komponen Halaman
+- **`<header>` & `<nav>`**: 
+  - `<h1>`: Judul utama aplikasi (hanya ada 1 per halaman).
+  - Menu navigasi menggunakan kombinasi `<ul>`, `<li>`, dan `<a>`. 
+  - Tautan mengarah ke subfolder langsung tanpa `../` (contoh: `buku/list.html`) karena `index.html` berada di root.
+- **`<main>` (Konten Utama)**:
+  - **Section Sambutan**: Memuat judul sub-bagian (`<h2>`) dan deskripsi singkat sistem (`<p>`).
+  - **Section Ringkasan**: Menampilkan kartu statistik dummy (*Total Buku*, *Total Anggota*, *Sedang Dipinjam*). Masing-masing dibungkus elemen semantik `<article>` (berisi `<h3>` dan `<p>`) karena informasinya bersifat mandiri (*self-contained*).
+- **`<footer>`**:
+  - Memuat informasi hak cipta.
+  - Menggunakan **HTML Entities** untuk karakter khusus agar aman dirender browser: `&copy;` untuk simbol `©` dan `&mdash;` untuk tanda pisah panjang `—`.
+
+### 3. Pola Template Standar
+File ini menjadi acuan struktur seragam untuk halaman lainnya:  
+`Header (Navigasi)` $\rightarrow$ `Main (Konten Spesifik)` $\rightarrow$ `Footer (Hak Cipta)`.
+
+
