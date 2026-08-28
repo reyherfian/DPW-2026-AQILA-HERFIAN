@@ -83,4 +83,88 @@ Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam
 2. Apa yang akan terjadi (di browser) kalau kamu klik tombol "Simpan" tanpa mengisi field "Nama"? Coba buka filenya di browser dan praktikkan.
    - form batal terkirim/submit dan pop-up peringatan wajib mengisi.
 3. Form ini juga belum punya action pada tag <form>-nya — apa dampaknya saat tombol "Simpan" ditekan?
-   - browser akan menerapkan default. 
+   - browser akan menerapkan default.
+  
+### 7. Ide Latihan Tambahan (opsional)
+1. Lengkapi konsistensi menu — tambahkan tautan "Daftar Anggota" dan "Tambah Anggota" ke menu <nav> di index.html, buku/list.html, dan buku/tambah.html (lihat catatan di dokumentasi anggota/list.html §5.4).
+   - ```
+         <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="buku/list.html">Daftar Buku</a></li>
+                <li><a href="buku/tambah.html">Tambah Buku</a></li>
+                <li><a href="anggota/list.html">Daftar Anggota</a></li>
+                <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
+            </ul>
+        </nav>
+     ```
+2. Tambah 2 baris data buku baru di buku/list.html dengan meng-copy satu blok <tr>...</tr> lalu mengganti isinya.
+   - ```
+     <tr>
+                <td>Filosofi Teras</td>
+                <td>Henry Manampiring</td>
+                <td>2018</td>
+                <td>5</td>
+                <td>
+
+                <button type="button">Edit</button>
+                <button type="button">Hapus</button>
+            </td>
+            </tr>
+            <tr>
+                <td>Sophie's World</td>
+                <td>Jostein Gaarder</td>
+                <td>1991</td>
+                <td>2</td>
+                <td>
+
+                <button type="button">Edit</button>
+                <button type="button">Hapus</button>
+            </td>
+            </tr>
+     ```
+3. Tambah kolom baru di tabel anggota, misalnya "Tanggal Bergabung", lengkap dengan <th> dan <td>-nya di setiap baris.
+   - anggota/tambah
+     ```
+         <p>
+            <label for="tanggal_bergabung">Tanggal Bergabung</label><br>
+            <input type="date" id="tanggal_bergabung" name="tanggal_bergabung" required>
+        </p>
+     ```
+   - anggota/list
+     ```
+      <tr>
+                <td>A002</td>
+                <td>Budi Santoso</td>
+                <td>Batu</td>
+                <td>0813xxxxxxx</td>
+                <td>    </td>
+                <td>2026-01-16</td>
+                    <button type="button">Edit</button>
+                    <button type="button">Hapus</button>
+                </td>
+            </tr>
+     ```
+4. Tambah field baru di form tambah anggota, misalnya "Email" memakai <input type="email"> (type="email" otomatis memvalidasi format alamat email tanpa perlu JavaScript tambahan).
+   - anggota/tambah
+     ```
+         <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+     ```
+   - anggota/list
+     ```
+         <tr>
+                <td>A002</td>
+                <td>Budi Santoso</td>
+                <td>Batu</td>
+                <td>0813xxxxxxx</td>
+                <td>    </td>
+                <td>2026-01-16</td>
+                <td>budisantoso@email.com</td>
+                    <button type="button">Edit</button>
+                    <button type="button">Hapus</button>
+                </td>
+         </tr>
+     ```
