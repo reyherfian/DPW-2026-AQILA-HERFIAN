@@ -27,6 +27,7 @@ Tautan antar-halaman menggunakan atribut `href` dengan path relatif berdasarkan 
 - **Naik folder**: `../index.html` (naik satu tingkat folder).
 - **Satu folder**: `tambah.html` (langsung nama file).
 
+
 # Ringkasan: Struktur Halaman Beranda (`index.html`)
 
 ### 1. Fungsi File
@@ -47,6 +48,7 @@ Tautan antar-halaman menggunakan atribut `href` dengan path relatif berdasarkan 
 ### 3. Pola Template Standar
 File ini menjadi acuan struktur seragam untuk halaman lainnya:  
 `Header (Navigasi)` $\rightarrow$ `Main (Konten Spesifik)` $\rightarrow$ `Footer (Hak Cipta)`.
+
 
 # Ringkasan: Struktur Halaman Daftar Buku (`buku/list.html`)
 
@@ -72,6 +74,7 @@ Data disajikan menggunakan tag semantik tabel agar ramah aksesibilitas (*screen 
 - Setiap baris memiliki kolom "Aksi" berisi tombol **Edit** dan **Hapus**.
 - Menggunakan atribut `type="button"` secara eksplisit untuk menandakan tombol reguler (bukan tombol submit form).
 - *Catatan*: Tombol dan data bersifat statis/dummy (belum terhubung ke JavaScript atau database).
+
 
 # Ringkasan: Struktur Halaman Tambah Buku (`buku/tambah.html`)
 
@@ -99,6 +102,7 @@ Validasi dasar diterapkan langsung di browser tanpa perlu JavaScript:
   - Menyediakan opsi terbatas: *Fiksi*, *Non-Fiksi*, dan *Referensi*.
   - Atribut `value` menentukan data aktual yang dikirim ke server, sedangkan teks di dalam tag menentukan tampilan di layar.
 
+
 ### 4. Tombol Submit (`<button>`)
 - Menggunakan `type="submit"` untuk memicu pengiriman form (berbeda dengan `type="button"` yang hanya bertindak sebagai tombol statis biasa).
 
@@ -121,3 +125,27 @@ Validasi dasar diterapkan langsung di browser tanpa perlu JavaScript:
   - `../buku/list.html`: Naik ke root lalu masuk ke folder `buku/`.
   - `list.html` & `tambah.html`: Langsung nama file (sesama folder `anggota/`).
 - **Catatan Konsistensi Navigasi**: Menu pada file ini sudah memuat tautan ke `tambah.html` (*Tambah Anggota*), sehingga menu di file lainnya (`index.html`, `buku/*.html`) perlu disinkronkan agar navigasi di seluruh aplikasi konsisten.
+
+
+# Ringkasan: Struktur Halaman Tambah Anggota (`anggota/tambah.html`)
+
+### 1. Fungsi File
+- Menyediakan formulir input (`<form>`) untuk mencatat data anggota baru perpustakaan sebagai bagian dari tugas mandiri.
+
+### 2. Kesamaan Pola dengan Form Buku
+- Setiap isian dibungkus elemen paragraf (`<p>`).
+- Menerapkan relasi aksesibilitas sepasang `<label for="...">` dengan `<input id="..." name="...">`.
+- Diakhiri dengan elemen `<button type="submit">Simpan</button>` untuk memicu pengiriman data form.
+
+### 3. Struktur Field & Tipe Data Input
+Seluruh field pada form ini menggunakan tipe teks murni (`type="text"`):
+- **Nama & No. Anggota**: Diberi atribut `required` (wajib diisi sebelum form dapat di-*submit*).
+- **Alamat & No. HP**: Bersifat opsional (tanpa atribut `required`).
+- **Konvensi Penamaan**: Menggunakan format *snake_case* / garis bawah (`no_anggota`, `no_hp`) pada atribut `id` dan `name` untuk menghindari spasi saat data diproses di backend.
+
+### 4. Alasan Teknis `type="text"` pada "No. Anggota"
+- Meskipun menggunakan istilah "Nomor", input didefinisikan sebagai `type="text"` karena format ID anggota bersifat **alfanumerik** (kombinasi huruf dan angka, seperti `A001`, `A002`). 
+- Penggunaan `type="number"` tidak tepat karena input tersebut akan menolak karakter alfabet.
+
+### 5. Catatan Pemrosesan Form
+- Form ini belum memiliki atribut `action` dan `method`, sehingga penekanan tombol submit hanya akan menyegarkan (*reload*) halaman browser tanpa memproses atau menyimpan data ke database.
