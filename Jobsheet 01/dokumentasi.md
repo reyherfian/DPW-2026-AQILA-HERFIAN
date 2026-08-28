@@ -15,11 +15,11 @@
 | 7 | Latihan opsional | ✅ Selesai | Latihan menambah input |
 
 ## DAFTAR ISI
-1. [`index.html`] (index.html)
-2. [`buku/list.html`] (buku/list.html)
-3. [`buku/tambah.html`] (buku/tambah.html)
-4. [`anggota/list.html`] (anggota/list.html)
-5. [`anggota/tambah.html`] (anggota/tambah.html)
+1. [`index.html`](index.html)
+2. [`buku/list.html`](buku/list.html)
+3. [`buku/tambah.html`](buku/tambah.html)
+4. [`anggota/list.html`](anggota/list.html)
+5. [`anggota/tambah.html`](anggota/tambah.html)
    
 ## LATIHAN
 ### 3.3 Data yang Ditampilkan (Dummy)
