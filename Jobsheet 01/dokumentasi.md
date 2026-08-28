@@ -11,8 +11,8 @@
 | 3 | Buku tambah | ✅ Selesai | Form input buku baru |
 | 4 | Anggota list | ✅ Selesai | Tampilan daftar anggota |
 | 5 | Anggota tambah | ✅ Selesai | Form input anggota |
-| 6 | Latihan reflektif | ⏳ On Progress | Pending |
-| 7 | Latihan opsional | ❌ Belum | Pending |
+| 6 | Latihan reflektif | ✅ Selesai | Latihan eksplorasi kode |
+| 7 | Latihan opsional | ✅ Selesai | Latihan menambah input |
 
 ### 3.3 Data yang Ditampilkan (Dummy)
 Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam HTML statis.
