@@ -48,4 +48,27 @@ Tautan antar-halaman menggunakan atribut `href` dengan path relatif berdasarkan 
 File ini menjadi acuan struktur seragam untuk halaman lainnya:  
 `Header (Navigasi)` $\rightarrow$ `Main (Konten Spesifik)` $\rightarrow$ `Footer (Hak Cipta)`.
 
+# Ringkasan: Struktur Halaman Daftar Buku (`buku/list.html`)
 
+### 1. Fungsi File
+- Menampilkan data katalog buku perpustakaan dalam bentuk **tabel HTML statis** (data dummy 5 baris).
+
+### 2. Penyesuaian Path Navigasi
+Karena file berada di dalam subfolder `buku/`, penulisan tautan navigasi (`href`) disesuaikan:
+- `../index.html`: Naik satu folder ke direktori root untuk membuka Beranda.
+- `list.html` & `tambah.html`: Langsung nama file (berada di folder yang sama).
+- `../anggota/list.html`: Naik ke root lalu masuk ke folder `anggota/`.
+
+### 3. Anatomi Tabel HTML (`<table>`)
+Data disajikan menggunakan tag semantik tabel agar ramah aksesibilitas (*screen reader*) dan memiliki relasi baris-kolom yang jelas:
+- `<table>`: Pembungkus utama seluruh komponen tabel.
+- `<thead>`: Bagian kepala tabel untuk mendefinisikan label kolom.
+- `<tbody>`: Bagian tubuh tabel yang memuat baris data aktual.
+- `<tr>` (*table row*): Mendefinisikan baris horizontal.
+- `<th>` (*table header cell*): Sel judul kolom (otomatis tebal dan rata tengah).
+- `<td>` (*table data cell*): Sel data biasa di dalam baris.
+
+### 4. Elemen Aksi & Tombol
+- Setiap baris memiliki kolom "Aksi" berisi tombol **Edit** dan **Hapus**.
+- Menggunakan atribut `type="button"` secara eksplisit untuk menandakan tombol reguler (bukan tombol submit form).
+- *Catatan*: Tombol dan data bersifat statis/dummy (belum terhubung ke JavaScript atau database).
