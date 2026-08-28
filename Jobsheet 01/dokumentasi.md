@@ -15,7 +15,12 @@
 | 7 | Latihan opsional | ✅ Selesai | Latihan menambah input |
 
 ## DAFTAR ISI
-
+1. `index.html`
+2. `buku/list.html`
+3. `buku/tambah.html`
+4. `anggota/list.html`
+5. `anggota/tambah.html`
+   
 ## LATIHAN
 ### 3.3 Data yang Ditampilkan (Dummy)
 Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam HTML statis.
