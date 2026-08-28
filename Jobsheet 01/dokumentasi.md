@@ -14,6 +14,9 @@
 | 6 | Latihan reflektif | ✅ Selesai | Latihan eksplorasi kode |
 | 7 | Latihan opsional | ✅ Selesai | Latihan menambah input |
 
+## DAFTAR ISI
+
+## LATIHAN
 ### 3.3 Data yang Ditampilkan (Dummy)
 Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam HTML statis.
 ```
