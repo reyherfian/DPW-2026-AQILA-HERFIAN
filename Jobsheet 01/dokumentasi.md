@@ -1,7 +1,4 @@
-<h4>Nama        : Aqila Herfian F.S<h4>
-<h4>NIM         : 254107020041<h4>
-<h4>Kelas       : TI-2F<h4>
-<h4>Absen       : 04<h4>
+<h4>Aqila Herfian F.S/TI-2F/04<h4>
 
 ## PROGRESS
 | No | Task / Modul | Status | Keterangan |
@@ -11,9 +8,17 @@
 | 3 | Buku tambah | ✅ Selesai | Form input buku baru |
 | 4 | Anggota list | ✅ Selesai | Tampilan daftar anggota |
 | 5 | Anggota tambah | ✅ Selesai | Form input anggota |
-| 6 | Latihan reflektif | ⏳ On Progress | Pending |
-| 7 | Latihan opsional | ❌ Belum | Pending |
+| 6 | Latihan reflektif | ✅ Selesai | Latihan eksplorasi kode |
+| 7 | Latihan opsional | ✅ Selesai | Latihan menambah input |
 
+## DAFTAR ISI
+1. [`index.html`](index.html)
+2. [`buku/list.html`](buku/list.html)
+3. [`buku/tambah.html`](buku/tambah.html)
+4. [`anggota/list.html`](anggota/list.html)
+5. [`anggota/tambah.html`](anggota/tambah.html)
+   
+## LATIHAN
 ### 3.3 Data yang Ditampilkan (Dummy)
 Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam HTML statis.
 ```
@@ -168,3 +173,4 @@ Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam
                 </td>
          </tr>
      ```
+## Rangkuman

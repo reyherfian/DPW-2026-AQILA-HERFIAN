@@ -1,86 +1,150 @@
-<h4>Nama        : Aqila Herfian F.S<h4>
-<h4>NIM         : 254107020041<h4>
-<h4>Kelas       : TI-2F<h4>
-<h4>Absen       : 04<h4>
+# Ringkasan: Konsep Dasar HTML (Jobsheet 1)
 
-## PROGRESS
-| No | Task / Modul | Status | Keterangan |
-|:--:|:---|:---:|:---|
-| 1 | Index html | ✅ Selesai | Beranda |
-| 2 | Buku list | ✅ Selesai | Tampilan daftar buku |
-| 3 | Buku tambah | ✅ Selesai | Form input buku baru |
-| 4 | Anggota list | ✅ Selesai | Tampilan daftar anggota |
-| 5 | Anggota tambah | ✅ Selesai | Form input anggota |
-| 6 | Latihan reflektif | ⏳ On Progress | Pending |
-| 7 | Latihan opsional | ❌ Belum | Pending |
+### 1. Tag vs Elemen
+- **Tag**: Sintaks pembuka (`<tag>`) dan penutup (`</tag>`).
+- **Elemen**: Keseluruhan isi dari tag pembuka sampai tag penutup (contoh: `<h1>SIMPUS-Mini</h1>`).
 
-### 3.3 Data yang Ditampilkan (Dummy)
-Menambah isi tabel yang berisikan judul buku, pengarang, tahun dan stok ke dalam HTML statis.
-```
+### 2. Struktur Dasar Dokumen HTML
+- `<!DOCTYPE html>`: Deklarasi standar dokumen HTML.
+- `<html lang="id">`: Pembungkus utama halaman dan penentu bahasa (Bahasa Indonesia).
+- `<head>`: Memuat metadata halaman (tidak tampil di layar), seperti:
+  - `<meta charset="UTF-8">`: Standar encoding karakter.
+  - `<title>`: Judul halaman pada tab browser.
+- `<body>`: Memuat seluruh konten visual yang tampil di browser (teks, tautan, form, tabel).
 
-    <table>
-        <thead>
-            <tr>
-                <th>Judul</th>
-                <th>Pengarang</th>
-                <th>Tahun Terbit</th>
-                <th>Stok</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Laskar Pelangi</td>
-                <td>Andrea Hirata</td>
-                <td>2008</td>
-                <td>4</td>
-                <td>
-                    <button type="button">Edit</button>
-                    <button type="button">Hapus</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Bumi Manusia</td>
-                <td>Pramoedya Ananta Toer</td>
-                <td>1980</td>
-                <td>2</td>
-                <td>
-                    <button type="button">Edit</button>
-                    <button type="button">Hapus</button>
-            <tr>
-                <td>Negeri 5 Menara</td>
-                <td>Ahmad Fuadi</td>
-                <td>2009</td>
-                <td>0</td>
-                <td>
-                    <button type="button">Edit</button>
-                    <button type="button">Hapus</button>
-            <tr>
-                <td>Filosofi Teras</td>
-                <td>Henry Manampiring</td>
-                <td>2018</td>
-                <td>5</td>
-                <td>
-                    <button type="button">Edit</button>
-                    <button type="button">Hapus</button>
-                </td>
-            <tr>
-                <td>Ronggeng Dukuh Paruk</td>
-                <td>Ahmad Tohari</td>
-                <td>1982</td>
-                <td>1</td>
-                <td>
+### 3. Tag Semantik HTML
+Tag semantik digunakan untuk memberi arti/makna struktural pada konten (bukan sekadar pembungkus polos seperti `<div>`), sehingga mempermudah pembacaan kode dan aksesibilitas:
+- `<header>`: Bagian kepala halaman/navigasi atas.
+- `<nav>`: Area menu atau daftar tautan navigasi.
+- `<main>`: Area konten utama (hanya 1 per halaman).
+- `<section>`: Pengelompokan bagian konten berdasarkan tema tertentu.
+- `<article>`: Blok konten mandiri (contoh: kartu statistik).
+- `<footer>`: Bagian kaki halaman (hak cipta/informasi penutup).
 
-                    <button type="button">Edit</button>
-                    <button type="button">Hapus</button>
-                </td>
-            </tr>
-```
+### 4. Navigasi & Path Relatif 
+Tautan antar-halaman menggunakan atribut `href` dengan path relatif berdasarkan lokasi file:
+- **Turun folder**: `buku/list.html` (masuk ke subfolder).
+- **Naik folder**: `../index.html` (naik satu tingkat folder).
+- **Satu folder**: `tambah.html` (langsung nama file).
 
-### 6.5 Latihan Reflektif
-1. Kenapa field "Alamat" dan "No. HP" tidak diberi `requiered`, sedangkan "Nama" dan "No. Anggota" diberi?
-   - karena "Nama" dan "No. Anggota" bersifat wajib yang berfungsi sebagai primary kry atau pengenal unik agar sistem dapat membedakan tiap baris data tanpa duplikasi. Sedangkan "Alamat" dan "No. HP" dibuat opsional. Nomor telepon dan alamat rumah tergolong data sensitif (Personally Identifiable Information.
-2. Apa yang akan terjadi (di browser) kalau kamu klik tombol "Simpan" tanpa mengisi field "Nama"? Coba buka filenya di browser dan praktikkan.
-   - form batal terkirim/submit dan pop-up peringatan wajib mengisi.
-3. Form ini juga belum punya action pada tag <form>-nya — apa dampaknya saat tombol "Simpan" ditekan?
-   - browser akan menerapkan default. 
+
+# Ringkasan: Struktur Halaman Beranda (`index.html`)
+
+### 1. Fungsi File
+- Berperan sebagai **halaman utama (entry point)** aplikasi SIMPUS-Mini yang otomatis dimuat browser saat mengakses direktori root.
+
+### 2. Bedah Komponen Halaman
+- **`<header>` & `<nav>`**: 
+  - `<h1>`: Judul utama aplikasi (hanya ada 1 per halaman).
+  - Menu navigasi menggunakan kombinasi `<ul>`, `<li>`, dan `<a>`. 
+  - Tautan mengarah ke subfolder langsung tanpa `../` (contoh: `buku/list.html`) karena `index.html` berada di root.
+- **`<main>` (Konten Utama)**:
+  - **Section Sambutan**: Memuat judul sub-bagian (`<h2>`) dan deskripsi singkat sistem (`<p>`).
+  - **Section Ringkasan**: Menampilkan kartu statistik dummy (*Total Buku*, *Total Anggota*, *Sedang Dipinjam*). Masing-masing dibungkus elemen semantik `<article>` (berisi `<h3>` dan `<p>`) karena informasinya bersifat mandiri (*self-contained*).
+- **`<footer>`**:
+  - Memuat informasi hak cipta.
+  - Menggunakan **HTML Entities** untuk karakter khusus agar aman dirender browser: `&copy;` untuk simbol `©` dan `&mdash;` untuk tanda pisah panjang `—`.
+
+### 3. Pola Template Standar
+`Header (Navigasi)` $\rightarrow$ `Main (Konten Spesifik)` $\rightarrow$ `Footer (Hak Cipta)`.
+
+
+# Ringkasan: Struktur Halaman Daftar Buku (`buku/list.html`)
+
+### 1. Fungsi File
+- Menampilkan data katalog buku perpustakaan dalam bentuk **tabel HTML statis** (data dummy 5 baris).
+
+### 2. Penyesuaian Path Navigasi
+Karena file berada di dalam subfolder `buku/`, penulisan tautan navigasi (`href`) disesuaikan:
+- `../index.html`: Naik satu folder ke direktori root untuk membuka Beranda.
+- `list.html` & `tambah.html`: Langsung nama file (berada di folder yang sama).
+- `../anggota/list.html`: Naik ke root lalu masuk ke folder `anggota/`.
+
+### 3. Anatomi Tabel HTML (`<table>`)
+Data disajikan menggunakan tag semantik tabel agar ramah aksesibilitas dan memiliki relasi baris-kolom yang jelas:
+- `<table>`: Pembungkus utama seluruh komponen tabel.
+- `<thead>`: Bagian kepala tabel untuk mendefinisikan label kolom.
+- `<tbody>`: Bagian tubuh tabel yang memuat baris data aktual.
+- `<tr>` (*table row*): Mendefinisikan baris horizontal.
+- `<th>` (*table header cell*): Sel judul kolom (otomatis tebal dan rata tengah).
+- `<td>` (*table data cell*): Sel data biasa di dalam baris.
+
+### 4. Elemen Aksi & Tombol
+- Setiap baris memiliki kolom "Aksi" berisi tombol **Edit** dan **Hapus**.
+- Menggunakan atribut `type="button"` secara eksplisit untuk menandakan tombol reguler (bukan tombol submit form).
+- *Catatan*: Tombol dan data bersifat statis/dummy (belum terhubung ke JavaScript atau database).
+
+
+# Ringkasan: Struktur Halaman Tambah Buku (`buku/tambah.html`)
+
+### 1. Fungsi File
+- Menyediakan antarmuka formulir input (`<form>`) untuk menambahkan data buku baru ke sistem perpustakaan.
+
+### 2. Komponen Dasar Form
+- **`<form>`**: Pembungkus seluruh field input yang akan dikirim secara bersamaan.
+- **Relasi `<label>` dan `<input>`**: 
+  - Menggunakan atribut `for` pada label yang nilainya sama dengan `id` pada input (contoh: `<label for="judul">` $\rightarrow$ `<input id="judul">`).
+  - Meningkatkan aksesibilitas dan kemudahan klik (memilih label langsung mengarahkan kursor ke kotak input).
+- **Perbedaan `id` vs `name`**:
+  - `id`: Pengenal unik elemen di dokumen HTML
+  - `name`: Kunci/parameter data yang dikirim ke server saat form di-*submit*.
+
+### 3. Ragam Elemen Input & Validasi Bawaan HTML5
+Validasi dasar diterapkan langsung di browser tanpa perlu JavaScript:
+- **Text (`type="text"`)**:
+  - Judul & Pengarang: Menggunakan atribut `required` (wajib diisi).
+  - ISBN: Bersifat opsional (tanpa `required`).
+- **Angka (`type="number"`)**:
+  - Tahun Terbit: Dibatasi dengan rentang `min="1900"` dan `max="2026"`.
+  - Stok: Dibatasi nilai minimal `min="0"` (mencegah stok negatif).
+- **Dropdown Pilihan (`<select>` & `<option>`)**:
+  - Menyediakan opsi terbatas: *Fiksi*, *Non-Fiksi*, dan *Referensi*.
+  - Atribut `value` menentukan data aktual yang dikirim ke server, sedangkan teks di dalam tag menentukan tampilan di layar.
+
+
+### 4. Tombol Submit (`<button>`)
+- Menggunakan `type="submit"` untuk memicu pengiriman form (berbeda dengan `type="button"` yang hanya bertindak sebagai tombol statis biasa).
+
+# Ringkasan: Struktur Halaman Daftar Anggota (`anggota/list.html`)
+
+### 1. Fungsi File
+- Menampilkan data tabel anggota perpustakaan secara statis sebagai penerapan mandiri dari konsep tabel HTML (`<table>`).
+
+### 2. Kesamaan Struktur dengan `buku/list.html`
+- Menggunakan hierarki tabel semantik yang identik: `<table>` $\rightarrow$ `<thead>` (judul kolom `<th>`) $\rightarrow$ `<tbody>` (baris `<tr>` & data `<td>`).
+- Menyediakan kolom **Aksi** dengan tombol reguler `<button type="button">` (Edit & Hapus) yang belum diberi logika JavaScript.
+
+### 3. Penyesuaian Data & Kolom
+- **Struktur Kolom**: Disesuaikan untuk entitas anggota, yaitu *No. Anggota*, *Nama*, *Alamat*, *No. HP*, dan *Aksi*.
+- **Data Dummy**: Berisi 2 baris data contoh (A001 & A002). Penggunaan format nomor telepon dummy (seperti `0812xxxx`) diterapkan sebagai praktik baik keamanan data pribadi.
+
+### 4. Navigasi & Tugas Konsistensi Menu
+- **Path Relatif Folder `anggota/`**:
+  - `../index.html`: Naik ke root untuk menuju Beranda.
+  - `../buku/list.html`: Naik ke root lalu masuk ke folder `buku/`.
+  - `list.html` & `tambah.html`: Langsung nama file (sesama folder `anggota/`).
+- **Catatan Konsistensi Navigasi**: Menu pada file ini sudah memuat tautan ke `tambah.html` (*Tambah Anggota*), sehingga menu di file lainnya (`index.html`, `buku/*.html`) perlu disinkronkan agar navigasi di seluruh aplikasi konsisten.
+
+
+# Ringkasan: Struktur Halaman Tambah Anggota (`anggota/tambah.html`)
+
+### 1. Fungsi File
+- Menyediakan formulir input (`<form>`) untuk mencatat data anggota baru perpustakaan sebagai bagian dari tugas mandiri.
+
+### 2. Kesamaan Pola dengan Form Buku
+- Setiap isian dibungkus elemen paragraf (`<p>`).
+- Menerapkan relasi aksesibilitas sepasang `<label for="...">` dengan `<input id="..." name="...">`.
+- Diakhiri dengan elemen `<button type="submit">Simpan</button>` untuk memicu pengiriman data form.
+
+### 3. Struktur Field & Tipe Data Input
+Seluruh field pada form ini menggunakan tipe teks murni (`type="text"`):
+- **Nama & No. Anggota**: Diberi atribut `required` (wajib diisi sebelum form dapat di-*submit*).
+- **Alamat & No. HP**: Bersifat opsional (tanpa atribut `required`).
+- **Konvensi Penamaan**: Menggunakan format *snake_case* / garis bawah (`no_anggota`, `no_hp`) pada atribut `id` dan `name` untuk menghindari spasi saat data diproses di backend.
+
+### 4. Alasan Teknis `type="text"` pada "No. Anggota"
+- Meskipun menggunakan istilah "Nomor", input didefinisikan sebagai `type="text"` karena format ID anggota bersifat **alfanumerik** (kombinasi huruf dan angka, seperti `A001`, `A002`). 
+- Penggunaan `type="number"` tidak tepat karena input tersebut akan menolak karakter alfabet.
+
+### 5. Catatan Pemrosesan Form
+- Form ini belum memiliki atribut `action` dan `method`, sehingga penekanan tombol submit hanya akan menyegarkan (*reload*) halaman browser tanpa memproses atau menyimpan data ke database.
