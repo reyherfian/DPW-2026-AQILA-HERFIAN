@@ -101,3 +101,23 @@ Validasi dasar diterapkan langsung di browser tanpa perlu JavaScript:
 
 ### 4. Tombol Submit (`<button>`)
 - Menggunakan `type="submit"` untuk memicu pengiriman form (berbeda dengan `type="button"` yang hanya bertindak sebagai tombol statis biasa).
+
+# Ringkasan: Struktur Halaman Daftar Anggota (`anggota/list.html`)
+
+### 1. Fungsi File
+- Menampilkan data tabel anggota perpustakaan secara statis sebagai penerapan mandiri dari konsep tabel HTML (`<table>`).
+
+### 2. Kesamaan Struktur dengan `buku/list.html`
+- Menggunakan hierarki tabel semantik yang identik: `<table>` $\rightarrow$ `<thead>` (judul kolom `<th>`) $\rightarrow$ `<tbody>` (baris `<tr>` & data `<td>`).
+- Menyediakan kolom **Aksi** dengan tombol reguler `<button type="button">` (Edit & Hapus) yang belum diberi logika JavaScript.
+
+### 3. Penyesuaian Data & Kolom
+- **Struktur Kolom**: Disesuaikan untuk entitas anggota, yaitu *No. Anggota*, *Nama*, *Alamat*, *No. HP*, dan *Aksi*.
+- **Data Dummy**: Berisi 2 baris data contoh (A001 & A002). Penggunaan format nomor telepon dummy (seperti `0812xxxx`) diterapkan sebagai praktik baik keamanan data pribadi.
+
+### 4. Navigasi & Tugas Konsistensi Menu
+- **Path Relatif Folder `anggota/`**:
+  - `../index.html`: Naik ke root untuk menuju Beranda.
+  - `../buku/list.html`: Naik ke root lalu masuk ke folder `buku/`.
+  - `list.html` & `tambah.html`: Langsung nama file (sesama folder `anggota/`).
+- **Catatan Konsistensi Navigasi**: Menu pada file ini sudah memuat tautan ke `tambah.html` (*Tambah Anggota*), sehingga menu di file lainnya (`index.html`, `buku/*.html`) perlu disinkronkan agar navigasi di seluruh aplikasi konsisten.
