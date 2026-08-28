@@ -72,3 +72,32 @@ Data disajikan menggunakan tag semantik tabel agar ramah aksesibilitas (*screen 
 - Setiap baris memiliki kolom "Aksi" berisi tombol **Edit** dan **Hapus**.
 - Menggunakan atribut `type="button"` secara eksplisit untuk menandakan tombol reguler (bukan tombol submit form).
 - *Catatan*: Tombol dan data bersifat statis/dummy (belum terhubung ke JavaScript atau database).
+
+# Ringkasan: Struktur Halaman Tambah Buku (`buku/tambah.html`)
+
+### 1. Fungsi File
+- Menyediakan antarmuka formulir input (`<form>`) untuk menambahkan data buku baru ke sistem perpustakaan.
+
+### 2. Komponen Dasar Form
+- **`<form>`**: Pembungkus seluruh field input yang akan dikirim secara bersamaan. *(Catatan: Atribut `action` dan `method` sengaja belum diisi karena pemrosesan data backend akan dipelajari pada jobsheet berikutnya).*
+- **Relasi `<label>` dan `<input>`**: 
+  - Menggunakan atribut `for` pada label yang nilainya sama dengan `id` pada input (contoh: `<label for="judul">` $\rightarrow$ `<input id="judul">`).
+  - Meningkatkan aksesibilitas dan kemudahan klik (memilih label langsung mengarahkan kursor ke kotak input).
+- **Perbedaan `id` vs `name`**:
+  - `id`: Pengenal unik elemen di dokumen HTML (untuk relasi label/CSS/JS).
+  - `name`: Kunci/parameter data yang dikirim ke server saat form di-*submit*.
+
+### 3. Ragam Elemen Input & Validasi Bawaan HTML5
+Validasi dasar diterapkan langsung di browser tanpa perlu JavaScript:
+- **Teks Bebas (`type="text"`)**:
+  - Judul & Pengarang: Menggunakan atribut `required` (wajib diisi).
+  - ISBN: Bersifat opsional (tanpa `required`).
+- **Angka (`type="number"`)**:
+  - Tahun Terbit: Dibatasi dengan rentang `min="1900"` dan `max="2026"`.
+  - Stok: Dibatasi nilai minimal `min="0"` (mencegah stok negatif).
+- **Dropdown Pilihan (`<select>` & `<option>`)**:
+  - Menyediakan opsi terbatas: *Fiksi*, *Non-Fiksi*, dan *Referensi*.
+  - Atribut `value` menentukan data aktual yang dikirim ke server, sedangkan teks di dalam tag menentukan tampilan di layar.
+
+### 4. Tombol Submit (`<button>`)
+- Menggunakan `type="submit"` untuk memicu pengiriman form (berbeda dengan `type="button"` yang hanya bertindak sebagai tombol statis biasa).
