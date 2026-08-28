@@ -5,15 +5,15 @@
 - **Elemen**: Keseluruhan isi dari tag pembuka sampai tag penutup (contoh: `<h1>SIMPUS-Mini</h1>`).
 
 ### 2. Struktur Dasar Dokumen HTML
-- `<!DOCTYPE html>`: Deklarasi standar dokumen HTML5.
-- `<html lang="id">`: Pembungkus utama halaman dan penentu bahasa konten (Bahasa Indonesia).
+- `<!DOCTYPE html>`: Deklarasi standar dokumen HTML.
+- `<html lang="id">`: Pembungkus utama halaman dan penentu bahasa (Bahasa Indonesia).
 - `<head>`: Memuat metadata halaman (tidak tampil di layar), seperti:
   - `<meta charset="UTF-8">`: Standar encoding karakter.
   - `<title>`: Judul halaman pada tab browser.
 - `<body>`: Memuat seluruh konten visual yang tampil di browser (teks, tautan, form, tabel).
 
-### 3. Tag Semantik HTML5
-Tag semantik digunakan untuk memberi arti/makna struktural pada konten (bukan sekadar pembungkus polos seperti `<div>`), sehingga mempermudah pembacaan kode, SEO, dan aksesibilitas (*screen reader*):
+### 3. Tag Semantik HTML
+Tag semantik digunakan untuk memberi arti/makna struktural pada konten (bukan sekadar pembungkus polos seperti `<div>`), sehingga mempermudah pembacaan kode dan aksesibilitas:
 - `<header>`: Bagian kepala halaman/navigasi atas.
 - `<nav>`: Area menu atau daftar tautan navigasi.
 - `<main>`: Area konten utama (hanya 1 per halaman).
@@ -21,7 +21,7 @@ Tag semantik digunakan untuk memberi arti/makna struktural pada konten (bukan se
 - `<article>`: Blok konten mandiri (contoh: kartu statistik).
 - `<footer>`: Bagian kaki halaman (hak cipta/informasi penutup).
 
-### 4. Navigasi & Path Relatif (`<a>`)
+### 4. Navigasi & Path Relatif 
 Tautan antar-halaman menggunakan atribut `href` dengan path relatif berdasarkan lokasi file:
 - **Turun folder**: `buku/list.html` (masuk ke subfolder).
 - **Naik folder**: `../index.html` (naik satu tingkat folder).
@@ -46,7 +46,6 @@ Tautan antar-halaman menggunakan atribut `href` dengan path relatif berdasarkan 
   - Menggunakan **HTML Entities** untuk karakter khusus agar aman dirender browser: `&copy;` untuk simbol `©` dan `&mdash;` untuk tanda pisah panjang `—`.
 
 ### 3. Pola Template Standar
-File ini menjadi acuan struktur seragam untuk halaman lainnya:  
 `Header (Navigasi)` $\rightarrow$ `Main (Konten Spesifik)` $\rightarrow$ `Footer (Hak Cipta)`.
 
 
@@ -62,7 +61,7 @@ Karena file berada di dalam subfolder `buku/`, penulisan tautan navigasi (`href`
 - `../anggota/list.html`: Naik ke root lalu masuk ke folder `anggota/`.
 
 ### 3. Anatomi Tabel HTML (`<table>`)
-Data disajikan menggunakan tag semantik tabel agar ramah aksesibilitas (*screen reader*) dan memiliki relasi baris-kolom yang jelas:
+Data disajikan menggunakan tag semantik tabel agar ramah aksesibilitas dan memiliki relasi baris-kolom yang jelas:
 - `<table>`: Pembungkus utama seluruh komponen tabel.
 - `<thead>`: Bagian kepala tabel untuk mendefinisikan label kolom.
 - `<tbody>`: Bagian tubuh tabel yang memuat baris data aktual.
@@ -82,17 +81,17 @@ Data disajikan menggunakan tag semantik tabel agar ramah aksesibilitas (*screen 
 - Menyediakan antarmuka formulir input (`<form>`) untuk menambahkan data buku baru ke sistem perpustakaan.
 
 ### 2. Komponen Dasar Form
-- **`<form>`**: Pembungkus seluruh field input yang akan dikirim secara bersamaan. *(Catatan: Atribut `action` dan `method` sengaja belum diisi karena pemrosesan data backend akan dipelajari pada jobsheet berikutnya).*
+- **`<form>`**: Pembungkus seluruh field input yang akan dikirim secara bersamaan.
 - **Relasi `<label>` dan `<input>`**: 
   - Menggunakan atribut `for` pada label yang nilainya sama dengan `id` pada input (contoh: `<label for="judul">` $\rightarrow$ `<input id="judul">`).
   - Meningkatkan aksesibilitas dan kemudahan klik (memilih label langsung mengarahkan kursor ke kotak input).
 - **Perbedaan `id` vs `name`**:
-  - `id`: Pengenal unik elemen di dokumen HTML (untuk relasi label/CSS/JS).
+  - `id`: Pengenal unik elemen di dokumen HTML
   - `name`: Kunci/parameter data yang dikirim ke server saat form di-*submit*.
 
 ### 3. Ragam Elemen Input & Validasi Bawaan HTML5
 Validasi dasar diterapkan langsung di browser tanpa perlu JavaScript:
-- **Teks Bebas (`type="text"`)**:
+- **Text (`type="text"`)**:
   - Judul & Pengarang: Menggunakan atribut `required` (wajib diisi).
   - ISBN: Bersifat opsional (tanpa `required`).
 - **Angka (`type="number"`)**:
