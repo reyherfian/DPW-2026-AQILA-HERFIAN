@@ -101,8 +101,21 @@ table {
     border-collapse: collapse;
 }
 
+th {
+    text-align: center; /*baris paling atas rata tengah*/
+}
+
+td:nth-child(1), /*kolom 1 2 rata kiri*/
+    :nth-child(2) {
+        text-align: left;
+    }
+
+td:nth-child(3), /*text kolom 3 4 5 center*/
+    :nth-child(4),
+    :nth-child(5) {
+        text-align: center;
+    }
 th, td {
-    text-align: left;
     padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e2e6ea;
 }
