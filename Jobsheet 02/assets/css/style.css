@@ -129,13 +129,18 @@ td button {
     font-size: 0.85rem;
 }
 
-td button:first-of-type {
+td button:nth-child(1) {
     background-color: #f0ad4e;
     color: #fff;
 }
 
-td button:last-of-type {
+td button:nth-child(2) {
     background-color: #d9534f;
+    color: #fff;
+}
+
+td button:nth-child(3) {
+    background-color: #4F96D9;
     color: #fff;
 }
 
