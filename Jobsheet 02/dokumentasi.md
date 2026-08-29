@@ -3,12 +3,12 @@
 ## PROGRESS
 
 - [x] index.htmml
-- [ ] buku list.html
-- [ ] buku tambah.html
-- [ ] anggota list.html
-- [ ] anggota tambah.html
-- [ ] style.css
-- [ ] latihan tambahan
+- [x] buku list.html
+- [x] buku tambah.html
+- [x] anggota list.html
+- [x] anggota tambah.html
+- [x] style.css
+- [x] latihan tambahan
 
 ## DAFTAR ISI
 1. [`index.html`](index.html)
