@@ -37,3 +37,9 @@
      | 1 | <pre><code>td button:nth-child(1) {<br>  background-color: #f0ad4e;<br>  color: #fff;<br>}</code></pre> |
      | 2 | <pre><code>td button:nth-child(2) {<br>  background-color: #d9534f;<br>  color: #fff;<br>}</code></pre> |
      | 3 | <pre><code>td button:nth-child(3) {<br>  background-color: #4f96d9;<br>  color: #fff;<br>}</code></pre> |
+
+## Hasil Akhir
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/a0ca5d11-cd3f-4fdd-af6d-67fa5d9d7a85" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/f1036d26-b128-47b3-be13-009e44076c78" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/4349b5e9-3697-4c18-83c8-148bcd8e8fa4" />
+
