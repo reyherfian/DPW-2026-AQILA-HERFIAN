@@ -22,7 +22,8 @@ a:hover {
 
 /* ==== Header & Navbar (Flexbox) ==== */
 header {
-    background-color: #1d5b8a;
+    background: #4a5e85;
+    background: radial-gradient(circle,rgba(74, 94, 133, 1) 0%, rgba(22, 41, 84, 1) 100%);
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -101,7 +102,7 @@ table {
     border-collapse: collapse;
 }
 
-th {
+table th {
     text-align: center; /*baris paling atas rata tengah*/
 }
 
