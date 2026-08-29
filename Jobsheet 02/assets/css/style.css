@@ -72,7 +72,9 @@ main section:nth-of-type(2) {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1; /*ini buat kasih perintah si ringkasan isi garis 1 sampe garis akhir, jadi kegeser semua*/
+}
 main section:nth-of-type(2) article {
     background-color: #eef4fa;
     border-radius: 8px;
@@ -90,6 +92,8 @@ main section:nth-of-type(2) article p {
     font-weight: 700;
     color: #1d5b8a;
 }
+
+
 
 /* ==== Tabel === */
 table {
