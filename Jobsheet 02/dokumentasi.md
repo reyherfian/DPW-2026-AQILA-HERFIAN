@@ -1,15 +1,14 @@
 <h4>Aqila Herfian F.S/TI-2F/04<h4>
 
 ## PROGRESS
-| No | Task / Modul | Status | Keterangan |
-|:--:|:---|:---:|:---|
-| 1 | Index html | ✅ Selesai | Beranda |
-| 2 | Buku list | ✅ Selesai | Tampilan daftar buku |
-| 3 | Buku tambah | ✅ Selesai | Form input buku baru |
-| 4 | Anggota list | ✅ Selesai | Tampilan daftar anggota |
-| 5 | Anggota tambah | ✅ Selesai | Form input anggota |
-| 6 | Latihan reflektif | ✅ Selesai | Latihan eksplorasi kode |
-| 7 | Latihan opsional | ✅ Selesai | Latihan memodifikasi css |
+
+- [x] index.htmml
+- [ ] buku list.html
+- [ ] buku tambah.html
+- [ ] anggota list.html
+- [ ] anggota tambah.html
+- [ ] style.css
+- [ ] latihan tambahan
 
 ## DAFTAR ISI
 1. [`index.html`](index.html)
