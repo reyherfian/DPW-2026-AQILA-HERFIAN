@@ -107,13 +107,13 @@ table th {
 }
 
 td:nth-child(1), /*kolom 1 2 rata kiri*/
-    :nth-child(2) {
+td:nth-child(2) {
         text-align: left;
     }
 
 td:nth-child(3), /*text kolom 3 4 5 center*/
-    :nth-child(4),
-    :nth-child(5) {
+td:nth-child(4),
+td:nth-child(5) {
         text-align: center;
     }
 th, td {
