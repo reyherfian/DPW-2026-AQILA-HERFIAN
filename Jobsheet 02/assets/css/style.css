@@ -12,7 +12,7 @@ body {
 }
 
 a {
-    color: #1d5b8a;
+    color: #4a5e85;
     text-decoration: none;
 }
 
@@ -64,7 +64,7 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #4a5e85;
 }
 
 /* ==== Kartu Statistik (CSS Grid) === */
@@ -91,7 +91,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #4a5e85;
 }
 
 
@@ -122,7 +122,7 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #4a5e85;
     color: #fff;
 }
 
@@ -180,7 +180,7 @@ form input, form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #4a5e85;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
