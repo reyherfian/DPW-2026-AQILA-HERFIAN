@@ -67,35 +67,6 @@ section h2 {
     color: #4a5e85;
 }
 
-/* ==== Kartu Statistik (CSS Grid) === */
-main section:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-}
-main section:nth-of-type(2) h2 {
-    grid-column: 1 / -1; /*ini buat kasih perintah si ringkasan isi garis 1 sampe garis akhir, jadi kegeser semua*/
-}
-main section:nth-of-type(2) article {
-    background-color: #eef4fa;
-    border-radius: 8px;
-    padding: 1.25rem;
-    text-align: center;
-}
-
-main section:nth-of-type(2) article h3 {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-}
-
-main section:nth-of-type(2) article p {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #4a5e85;
-}
-
-
-
 /* ==== Tabel === */
 table {
     width: 100%;
@@ -199,80 +170,4 @@ footer {
     padding: 1.25rem;
     color: #7a8794;
     font-size: 0.9rem;
-}
-
-/* ==== Responsive Table ==== */
-footer {
-    text-align: center;
-    padding: 1.25rem;
-    color: #7a8794;
-    font-size: 0.9rem;
-}
-
-pre {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    white-space: pre;
-    background-color: #1e1e1e;
-    color: #f8f8f2;
-    padding: 1rem;
-    border-radius: 8px;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* === Hamburger Menu === */
-.nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    display: none;
-    font-size: 1.6rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* === Responsive Breakpoints === */
-/* Tablet ke bawah */
-@media (max-width: 900px) {
-    main section:nth-of-type(2) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile ke bawah */
-@media (max-width: 480px) {
-    header {
-        position: relative;
-    }
-
-    .nav-toggle-label {
-        display: block;
-    }
-
-    header nav {
-        display: none;
-        width: 100%;
-        order: 3;
-        margin-top: 1rem;
-    }
-
-    .nav-toggle:checked ~ nav {
-        display: block;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    main section:nth-of-type(2) {
-        grid-template-columns: 1fr;
-    }
-
-    form input,
-    form select {
-        max-width: 100%;
-    }
 }
