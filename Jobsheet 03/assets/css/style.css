@@ -12,7 +12,7 @@ body {
 }
 
 a {
-    color: #1d5b8a;
+    color: #4a5e85;
     text-decoration: none;
 }
 
@@ -20,8 +20,10 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ==== Header & Navbar (Flexbox) ==== */
 header {
-    background-color: #1d5b8a;
+    background: #4a5e85;
+    background: radial-gradient(circle,rgba(74, 94, 133, 1) 0%, rgba(22, 41, 84, 1) 100%);
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -36,7 +38,7 @@ header h1 {
 
 header nav ul {
     list-style: none;
-    display: flex;
+    display:flex;
     gap: 1.25rem;
 }
 
@@ -45,6 +47,7 @@ header nav a {
     font-weight: 500;
 }
 
+/* ==== Main Layout ==== */
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -61,15 +64,18 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #4a5e85;
 }
 
+/* ==== Kartu Statistik (CSS Grid) === */
 main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
-
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1; /*ini buat kasih perintah si ringkasan isi garis 1 sampe garis akhir, jadi kegeser semua*/
+}
 main section:nth-of-type(2) article {
     background-color: #eef4fa;
     border-radius: 8px;
@@ -78,31 +84,50 @@ main section:nth-of-type(2) article {
 }
 
 main section:nth-of-type(2) article h3 {
-    margin-bottom: 0.95rem;
-    color: #55677a;
+    font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #4a5e85;
 }
 
+
+
+/* ==== Tabel === */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
+table th {
+    text-align: center; /*baris paling atas rata tengah*/
+}
+
+td:nth-child(1), /*kolom 1 2 rata kiri*/
+td:nth-child(2) {
+        text-align: left;
+    }
+
+td:nth-child(3), /*text kolom 3 4 5 center*/
+td:nth-child(4),
+td:nth-child(5) {
+        text-align: center;
+    }
 th, td {
-    text-align: left;
     padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e2e6ea;
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #4a5e85;
     color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f9fb;
 }
 
 tbody tr:hover {
@@ -118,16 +143,22 @@ td button {
     font-size: 0.85rem;
 }
 
-td button:first-of-type {
+td button:nth-child(1) {
     background-color: #f0ad4e;
     color: #fff;
 }
 
-td button:last-of-type {
+td button:nth-child(2) {
     background-color: #d9534f;
     color: #fff;
 }
 
+td button:nth-child(3) {
+    background-color: #4F96D9;
+    color: #fff;
+}
+
+/* ==== Form ===*/
 form p {
     margin-bottom: 1rem;
 }
@@ -139,8 +170,7 @@ form label {
     color: #444;
 }
 
-form input,
-form select {
+form input, form select {
     width: 100%;
     max-width: 400px;
     padding: 0.55rem 0.7rem;
@@ -149,8 +179,8 @@ form select {
     font-size: 1rem;
 }
 
-form button [type="submit"] {
-    background-color: #1d5b8a;
+form button[type="submit"] {
+    background-color: #4a5e85;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -163,6 +193,7 @@ form button[type="submit"]:hover {
     background-color: #164869;
 }
 
+/* ==== Footer ==== */
 footer {
     text-align: center;
     padding: 1.25rem;
@@ -170,10 +201,15 @@ footer {
     font-size: 0.9rem;
 }
 
-.table-responsive {
-    overflow-x: auto;
+/* ==== Responsive Table ==== */
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    color: #7a8794;
+    font-size: 0.9rem;
 }
 
+/* === Hamburger Menu === */
 .nav-toggle {
     display: none;
 }
@@ -185,12 +221,15 @@ footer {
     cursor: pointer;
 }
 
+/* === Responsive Breakpoints === */
+/* Tablet ke bawah */
 @media (max-width: 768px) {
     main section:nth-of-type(2) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Mobile ke bawah */
 @media (max-width: 480px) {
     header {
         position: relative;
