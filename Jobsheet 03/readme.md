@@ -1,3 +1,30 @@
+# Rangkuman Konsep & Implementasi Responsive Web Design (RWD)
+
+## 1. Konsep Dasar RWD
+* **Definisi:** Pendekatan pembuatan tata letak web agar otomatis menyesuaikan resolusi atau lebar layar perangkat (HP, tablet, desktop) menggunakan satu berkas HTML/CSS yang sama.
+* **`<meta name="viewport">`:**
+  * Sintaks: `<meta name="viewport" content="width=device-width, initial-scale=1">`
+  * Fungsi: Mencegah browser mobile memakai *default layout viewport* (±980px) yang menyebabkan tampilan mengecil (*zoom out* otomatis). Menyelaraskan 1px CSS dengan ukuran layar fisik.
+* **Media Query (`@media`):** Mekanisme CSS untuk menerapkan styling bersyarat tanpa bantuan JavaScript.
+* **Breakpoint:** Batas lebar layar target pengaktif media query (pada modul ini: `768px` untuk tablet dan `480px` untuk mobile).
+* **Pendekatan Desktop-First:**
+  * Styling default ditulis untuk layar monitor besar terlebih dahulu.
+  * Blok `@media (max-width: ...)` diletakkan di **paling bawah berkas CSS** agar aturan di layar kecil berhasil menimpa (*override*) gaya default sesuai aturan spesifisitas.
+
+## 2. Perubahan pada Berkas HTML
+1. **Tag Meta Viewport:** Disisipkan di bagian `<head>` seluruh dokumen HTML.
+2. **Struktur Checkbox Hack:** Ditambahkan elemen `<input type="checkbox" id="nav-toggle" class="nav-toggle">` dan `<label for="nav-toggle" class="nav-toggle-label">&#9776;</label>` sejajar di dalam `<header>` tepat sebelum `<nav>`.
+3. **Pembungkus Tabel:** Elemen `<table>` dibungkus menggunakan `<div class="table-responsive">` sebagai pengontrol overflow.
+
+
+## 3. Komponen Tabel Responsif (`table-responsive`)
+* **Masalah:** Tabel dengan jumlah kolom banyak mendesak layout dan terpotong di layar berukuran sempit.
+* **Solusi CSS:**
+  ```css
+  .table-responsive {
+      overflow-x: auto;
+  }
+
 # Rangkuman Materi Bootstrap: Konsep, Komponen, dan Grid
 
 ## 1. Konsep Dasar & Filosofi Bootstrap
