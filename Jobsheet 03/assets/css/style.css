@@ -209,6 +209,18 @@ footer {
     font-size: 0.9rem;
 }
 
+pre {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* === Hamburger Menu === */
 .nav-toggle {
     display: none;
@@ -223,7 +235,7 @@ footer {
 
 /* === Responsive Breakpoints === */
 /* Tablet ke bawah */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     main section:nth-of-type(2) {
         grid-template-columns: repeat(2, 1fr);
     }
