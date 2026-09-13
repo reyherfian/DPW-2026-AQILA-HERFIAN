@@ -1,1 +1,1 @@
-<img width="933" height="587" alt="image" src="https://github.com/user-attachments/assets/3438c19c-ab41-47a8-a7ef-e223e3b85be8" />
+<img width="2816" height="1382" alt="wireframe dpw 4" src="https://github.com/user-attachments/assets/536bd85b-0cfa-4f5e-bed2-a51d2a7395ff" />
